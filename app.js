@@ -1055,8 +1055,9 @@ function fallbackCopy(text, onSuccess) {
   document.body.appendChild(ta);
   ta.select();
   try {
-    document.execCommand('copy');
-    if (onSuccess) onSuccess();
+    const ok = document.execCommand('copy');
+    if (ok) { if (onSuccess) onSuccess(); }
+    else { showToast('Copy failed — try selecting text manually.'); }
   } catch (e) {
     showToast('Copy failed — try selecting text manually.');
   }
@@ -1140,24 +1141,31 @@ function renderEntries() {
     return;
   }
   container.innerHTML = entries.map(e => {
-    const dropClass = e.dropoff > 70 ? 'bad' : e.dropoff > 50 ? 'ok' : 'good';
+    const safeId    = Number(e.id) || 0;
+    const safeViews = Number(e.views) || 0;
+    const safeDrop  = Number(e.dropoff) || 0;
+    const safeResCmts = Number(e.resumeComments) || 0;
+    const safeSales = Number(e.sales) || 0;
+    const dropClass = safeDrop > 70 ? 'bad' : safeDrop > 50 ? 'ok' : 'good';
     const safeAngle = escapeHTML(e.angle || '');
     const safeTopic = escapeHTML(e.topic || '');
     const safeNotes = escapeHTML(e.notes || '');
+    const safeDate  = escapeHTML(e.date  || '');
+    const safeTime  = escapeHTML(e.time  || '');
     return `
       <div class="entry-card">
         <div class="entry-head">
           <div class="entry-meta">
-            <strong>${e.date} — ${e.time}</strong>
+            <strong>${safeDate} — ${safeTime}</strong>
             <span>${safeAngle}${safeTopic ? ' · ' + safeTopic : ''}</span>
           </div>
-          <button class="btn btn-danger btn-sm" onclick="deleteEntry(${e.id})">Delete</button>
+          <button class="btn btn-danger btn-sm" data-entry-id="${safeId}" onclick="deleteEntry(+this.dataset.entryId)">Delete</button>
         </div>
         <div class="entry-metrics">
-          <div class="m-box"><div class="m-val">${(e.views||0).toLocaleString()}</div><div class="m-lbl">Views</div></div>
-          <div class="m-box"><div class="m-val ${dropClass}">${e.dropoff||0}%</div><div class="m-lbl">S1→S2 Drop</div></div>
-          <div class="m-box"><div class="m-val">${e.resumeComments||0}</div><div class="m-lbl">RESUME cmts</div></div>
-          <div class="m-box"><div class="m-val">${e.sales||0}</div><div class="m-lbl">Sales</div></div>
+          <div class="m-box"><div class="m-val">${safeViews.toLocaleString()}</div><div class="m-lbl">Views</div></div>
+          <div class="m-box"><div class="m-val ${dropClass}">${safeDrop}%</div><div class="m-lbl">S1→S2 Drop</div></div>
+          <div class="m-box"><div class="m-val">${safeResCmts}</div><div class="m-lbl">RESUME cmts</div></div>
+          <div class="m-box"><div class="m-val">${safeSales}</div><div class="m-lbl">Sales</div></div>
         </div>
         ${safeNotes ? `<div style="margin-top:10px;font-size:12px;color:var(--muted);padding-top:8px;border-top:1px solid var(--border);white-space:pre-line">${safeNotes}</div>` : ''}
       </div>

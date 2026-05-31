@@ -347,7 +347,7 @@ h3{font-size:15px;font-weight:600;margin-bottom:8px}
   font-size:9px;text-transform:uppercase;
   letter-spacing:1px;color:var(--muted);margin-bottom:3px;
 }
-.slide-text{font-size:14px;line-height:1.6}
+.slide-text{font-size:14px;line-height:1.6;white-space:pre-line}
 .post-extras{
   display:grid;grid-template-columns:1fr 1fr;gap:14px;
   padding-top:18px;border-top:1px solid var(--border);
