@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RMM Agent Command Center</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="mobile-header">
+    <div class="header-brand">RMM</div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="layout">
+
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo">RMM</div>
+        <div class="brand-tagline">Agent Command Center</div>
+      </div>
+      <ul class="nav-list">
+        <li><button class="nav-btn active" data-section="home">&#127968; Dashboard</button></li>
+        <li><button class="nav-btn" data-section="agents">&#129302; Agent Center</button></li>
+        <li><button class="nav-btn" data-section="post-generator">&#9998; Post Generator</button></li>
+        <li><button class="nav-btn" data-section="calendar">&#128197; Weekly Calendar</button></li>
+        <li><button class="nav-btn" data-section="cta-bank">&#128172; CTA Bank</button></li>
+        <li><button class="nav-btn" data-section="dm-replies">&#128233; DM Replies</button></li>
+        <li><button class="nav-btn" data-section="content-rules">&#128203; Content Rules</button></li>
+        <li><button class="nav-btn" data-section="landing-page">&#127760; Landing Page</button></li>
+        <li><button class="nav-btn" data-section="performance">&#128202; Performance</button></li>
+        <li><button class="nav-btn" data-section="next-steps">&#128640; Next Steps</button></li>
+      </ul>
+      <div class="sidebar-funnel">
+        <div class="funnel-label">Goal Funnel</div>
+        <div class="funnel-chain">
+          <span class="funnel-step">Comments</span>
+          <span class="funnel-arrow">&#8595;</span>
+          <span class="funnel-step">DMs</span>
+          <span class="funnel-arrow">&#8595;</span>
+          <span class="funnel-step">Checklist</span>
+          <span class="funnel-arrow">&#8595;</span>
+          <span class="funnel-step accent">$20 Sale</span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main" id="mainContent">
+
+      <!-- ── HOME ─────────────────────────────────────────────────── -->
+      <section id="section-home" class="section active">
+        <div class="page-header">
+          <h1>Resume Money Method</h1>
+          <p class="page-sub">Your AI-powered content operating system.</p>
+        </div>
+        <div class="stat-grid" id="homeStats"></div>
+        <div class="home-grid" id="homeGrid"></div>
+      </section>
+
+      <!-- ── AGENT CENTER ──────────────────────────────────────────── -->
+      <section id="section-agents" class="section">
+        <div class="page-header">
+          <h1>Agent Center</h1>
+          <p class="page-sub">Rule-based agents for every content task. Real AI API upgrades in v2.</p>
+        </div>
+        <div class="agent-grid" id="agentGrid"></div>
+      </section>
+
+      <!-- ── POST GENERATOR ────────────────────────────────────────── -->
+      <section id="section-post-generator" class="section">
+        <div class="page-header">
+          <h1>Post Generator</h1>
+          <p class="page-sub">Choose an angle and generate a complete 5-slide RMM post.</p>
+        </div>
+        <div class="generator-bar">
+          <div class="form-group flex-grow">
+            <label for="angleSelect">Content Angle</label>
+            <select id="angleSelect">
+              <option value="">— Choose an angle —</option>
+              <option value="opportunity">Opportunity / Mechanism</option>
+              <option value="skeptic">Skeptic-Addressing</option>
+              <option value="beginner">Beginner-Objection</option>
+              <option value="process">Behind-the-Process</option>
+              <option value="before-after">Before / After Value</option>
+              <option value="engagement">Engagement Question</option>
+              <option value="tool-stack">Tool Stack</option>
+              <option value="myth-bust">Myth-Bust</option>
+              <option value="honest">Honest-Limits</option>
+              <option value="discovery">Discovery-Framing</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" id="generateBtn">Generate Post</button>
+        </div>
+        <div id="generatedPost" class="hidden"></div>
+      </section>
+
+      <!-- ── WEEKLY CALENDAR ───────────────────────────────────────── -->
+      <section id="section-calendar" class="section">
+        <div class="page-header">
+          <h1>Weekly Calendar</h1>
+          <p class="page-sub">Two posts per day. Rotate angles to keep the page fresh.</p>
+        </div>
+        <div id="calendarContent"></div>
+      </section>
+
+      <!-- ── CTA BANK ──────────────────────────────────────────────── -->
+      <section id="section-cta-bank" class="section">
+        <div class="page-header">
+          <h1>CTA Bank</h1>
+          <p class="page-sub">Click any CTA to copy it instantly.</p>
+        </div>
+        <div id="ctaBankContent"></div>
+      </section>
+
+      <!-- ── DM REPLIES ────────────────────────────────────────────── -->
+      <section id="section-dm-replies" class="section">
+        <div class="page-header">
+          <h1>DM Reply Bank</h1>
+          <p class="page-sub">Pre-written replies for the most common DM scenarios.</p>
+        </div>
+        <div id="dmRepliesContent"></div>
+      </section>
+
+      <!-- ── CONTENT RULES ─────────────────────────────────────────── -->
+      <section id="section-content-rules" class="section">
+        <div class="page-header">
+          <h1>Content Rules</h1>
+          <p class="page-sub">Every post must follow these rules without exception.</p>
+        </div>
+        <div id="contentRulesContent"></div>
+      </section>
+
+      <!-- ── LANDING PAGE ──────────────────────────────────────────── -->
+      <section id="section-landing-page" class="section">
+        <div class="page-header">
+          <h1>Landing Page Copy</h1>
+          <p class="page-sub">Copy-ready blocks for the RMM landing page.</p>
+        </div>
+        <div id="landingPageContent"></div>
+      </section>
+
+      <!-- ── PERFORMANCE TRACKER ───────────────────────────────────── -->
+      <section id="section-performance" class="section">
+        <div class="page-header">
+          <h1>Performance Tracker</h1>
+          <p class="page-sub">Log every post. Data saves in your browser.</p>
+        </div>
+        <div class="tabs" id="trackerTabs">
+          <button class="tab-btn active" data-tab="add">Add Entry</button>
+          <button class="tab-btn" data-tab="entries">View Entries</button>
+          <button class="tab-btn" data-tab="diagnostics">Diagnostics</button>
+        </div>
+        <div id="tab-add" class="tab-panel active">
+          <form id="trackerForm" class="tracker-form">
+            <div class="form-row-3">
+              <div class="form-group">
+                <label for="tDate">Date</label>
+                <input type="date" id="tDate" />
+              </div>
+              <div class="form-group">
+                <label for="tTime">Time Slot</label>
+                <select id="tTime">
+                  <option value="9:00 AM">9:00 AM</option>
+                  <option value="4:00 PM">4:00 PM</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="tAngle">Angle</label>
+                <input type="text" id="tAngle" placeholder="e.g. Skeptic-Addressing" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="tTopic">Post Topic</label>
+              <input type="text" id="tTopic" placeholder="Short description of the post" />
+            </div>
+            <div class="form-row-3">
+              <div class="form-group">
+                <label for="tViews">Views</label>
+                <input type="number" id="tViews" min="0" placeholder="0" />
+              </div>
+              <div class="form-group">
+                <label for="tDrop">Slide 1&#8594;2 Drop-off %</label>
+                <input type="number" id="tDrop" min="0" max="100" placeholder="e.g. 70" />
+              </div>
+              <div class="form-group">
+                <label for="tSwipe">Swipe-through to Slide 5 %</label>
+                <input type="number" id="tSwipe" min="0" max="100" placeholder="e.g. 30" />
+              </div>
+            </div>
+            <div class="form-row-3">
+              <div class="form-group">
+                <label for="tComments">Comments</label>
+                <input type="number" id="tComments" min="0" placeholder="0" />
+              </div>
+              <div class="form-group">
+                <label for="tResume">RESUME Comments</label>
+                <input type="number" id="tResume" min="0" placeholder="0" />
+              </div>
+              <div class="form-group">
+                <label for="tDMs">DMs</label>
+                <input type="number" id="tDMs" min="0" placeholder="0" />
+              </div>
+            </div>
+            <div class="form-row-3">
+              <div class="form-group">
+                <label for="tChecklist">Checklist Clicks</label>
+                <input type="number" id="tChecklist" min="0" placeholder="0" />
+              </div>
+              <div class="form-group">
+                <label for="tSales">Guide Sales</label>
+                <input type="number" id="tSales" min="0" placeholder="0" />
+              </div>
+              <div class="form-group"><!-- spacer --></div>
+            </div>
+            <div class="form-group">
+              <label for="tNotes">Notes &amp; Next Test</label>
+              <textarea id="tNotes" placeholder="What worked? What to improve? What to test next?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Entry</button>
+          </form>
+        </div>
+        <div id="tab-entries" class="tab-panel">
+          <div class="entries-toolbar">
+            <span id="entryCount" class="muted-text">0 entries</span>
+            <button class="btn btn-danger btn-sm" id="clearAllBtn">Clear All Data</button>
+          </div>
+          <div id="entriesContainer"></div>
+        </div>
+        <div id="tab-diagnostics" class="tab-panel">
+          <div id="diagnosticsContainer"></div>
+        </div>
+      </section>
+
+      <!-- ── NEXT STEPS ────────────────────────────────────────────── -->
+      <section id="section-next-steps" class="section">
+        <div class="page-header">
+          <h1>Next Upgrade Path</h1>
+          <p class="page-sub">Where this system goes after you're consistent.</p>
+        </div>
+        <div id="nextStepsContent"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <div class="overlay" id="overlay"></div>
+  <script src="app.js"></script>
+</body>
+</html>

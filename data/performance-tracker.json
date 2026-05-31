@@ -1,0 +1,30 @@
+{
+  "schema": {
+    "date": "string",
+    "time": "string",
+    "topic": "string",
+    "angle": "string",
+    "slide1": "string",
+    "slide2": "string",
+    "views": "number",
+    "slide2Dropoff": "number",
+    "swipeThrough": "number",
+    "comments": "number",
+    "resumeComments": "number",
+    "dms": "number",
+    "checklistClicks": "number",
+    "guideSales": "number",
+    "notes": "string"
+  },
+  "targets": {
+    "slide2DropoffCurrent": 70,
+    "slide2DropoffTarget1": 50,
+    "slide2DropoffTarget2": 40
+  },
+  "diagnostics": {
+    "highViewsLowComments": "Hook is working but offer or CTA is not clear enough. Make service clearer by Slide 2.",
+    "highSlide1LowSlide2": "Slide 2 is probably too vague. Use a clear mechanism line.",
+    "goodSwipeNoResume": "Post is useful but CTA may not feel worth commenting for. Make checklist more concrete.",
+    "goodCommentsLowSales": "Lead magnet may not be doing enough selling. Improve DM follow-up and landing page."
+  }
+}

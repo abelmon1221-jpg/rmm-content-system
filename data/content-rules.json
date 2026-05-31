@@ -1,0 +1,68 @@
+{
+  "format": {
+    "title": "Format Rule",
+    "rules": [
+      "Every TikTok post must be exactly 5 slides.",
+      "No exceptions unless manually requested.",
+      "Optimize for swipe-through to Slide 5, not just views."
+    ]
+  },
+  "slide2": {
+    "title": "Slide 2 Reward Rule",
+    "rules": [
+      "Slide 1 creates curiosity.",
+      "Slide 2 MUST reward that curiosity immediately.",
+      "Slide 2 must clearly explain the mechanism or opportunity.",
+      "The offer must be clear by Slide 2.",
+      "Do NOT make Slide 2 vague."
+    ],
+    "badExamples": [
+      "Here's why",
+      "Let me explain",
+      "Most people miss this",
+      "It's simpler than you think"
+    ],
+    "goodExamples": [
+      "It's a resume cleanup service.",
+      "People pay to have their resumes cleaned up before they apply.",
+      "AI helps with the wording, bullets, and keywords.",
+      "You offer a simple service business around resume cleanup.",
+      "You are not writing from scratch. You are cleaning up what they already have."
+    ]
+  },
+  "language": {
+    "use": [
+      "resume cleanup service",
+      "AI-assisted resume cleanup",
+      "simple service business",
+      "beginner service business",
+      "extra income idea",
+      "make money helping people with resumes",
+      "clean up resumes with AI"
+    ],
+    "avoid": [
+      "professional resume writing",
+      "resume rewrite business",
+      "passive income",
+      "escape the 9-5",
+      "get rich quick",
+      "guaranteed income",
+      "easy money",
+      "secret hack",
+      "guru language",
+      "hype language"
+    ]
+  },
+  "tone": {
+    "use": ["calm", "direct", "practical", "mature", "honest", "skeptical-buyer aware"],
+    "avoid": ["guru", "teenager flexing", "passive income influencer", "fake expert", "corporate coach"]
+  },
+  "slideGoals": {
+    "slide1": "Stop the scroll. Create curiosity.",
+    "slide2": "Explain the mechanism. Make the offer clear.",
+    "slide3": "Make the idea feel beginner-friendly.",
+    "slide4": "Give one tangible, useful detail.",
+    "slide5": "Ask for a low-pressure action (Comment RESUME)."
+  },
+  "funnel": "comments → DMs → free checklist downloads → $20 guide sales"
+}

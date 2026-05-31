@@ -1,0 +1,34 @@
+[
+  {
+    "trigger": "After someone comments RESUME",
+    "reply": "Sent. Here's the free Resume Cleanup Starter Checklist. It walks you through the basic process. Take a look and tell me if it makes sense for you.\n\n[link]"
+  },
+  {
+    "trigger": "If they ask if this is real",
+    "reply": "Fair question. I would be skeptical too.\n\nIt is not a get-rich thing. People genuinely pay to have their resumes cleaned up, and AI makes the service easier to deliver.\n\nStart with the free checklist and judge it for yourself."
+  },
+  {
+    "trigger": "If they ask how much they can make",
+    "reply": "I do not want to throw a random number at you because it depends on how many people you help and how consistent you are.\n\nWhat I can show you is the process.\n\nStart with the free checklist first and see if it feels like something you would actually do."
+  },
+  {
+    "trigger": "If they ask if they need experience",
+    "reply": "No, that is the point.\n\nYou are not becoming a professional resume writer.\n\nYou are learning a simple resume cleanup process using AI tools.\n\nThe checklist shows the basic steps."
+  },
+  {
+    "trigger": "If they ask what tools are used",
+    "reply": "The method uses Grok, ChatGPT, and Claude.\n\nGrok helps with job-market keywords.\n\nChatGPT helps with structure and bullet cleanup.\n\nClaude helps make the wording sound more natural."
+  },
+  {
+    "trigger": "If they ask about the full guide",
+    "reply": "The free checklist gives you the starter version.\n\nThe full $20 guide breaks down the complete process, the tool stack, the prompt, how to find people, and how to deliver the cleaned-up resume.\n\nWant the link?"
+  },
+  {
+    "trigger": "If they go cold",
+    "reply": "No pressure. Try the checklist first.\n\nIf you get stuck or have questions, message me."
+  },
+  {
+    "trigger": "If they say they have no money",
+    "reply": "Start with the free checklist first.\n\nYou do not need to buy anything just to understand the idea.\n\nIf it makes sense later, the full guide is there."
+  }
+]
