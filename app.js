@@ -794,7 +794,7 @@ function renderAgents() {
       </div>
       <div class="agent-purpose">${a.purpose}</div>
       <div class="agent-input-label">Input</div>
-      <textarea class="agent-input" id="input-${a.id}" placeholder="${a.placeholder}"></textarea>
+      <textarea class="agent-input" id="input-${a.id}" placeholder="${htmlEsc(a.placeholder)}"></textarea>
       <div class="agent-input-label">Output</div>
       <div class="agent-output" id="output-${a.id}">Output will appear here...</div>
       <div class="agent-actions">
@@ -1287,6 +1287,8 @@ function copyText(text, btn) {
 function htmlEsc(str) {
   return String(str)
     .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
 }
 
