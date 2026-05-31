@@ -211,6 +211,23 @@ h3{font-size:15px;font-weight:600;margin-bottom:8px}
 .info-card h3{font-size:13px;font-weight:600;margin-bottom:6px}
 .info-card p{font-size:13px;color:var(--muted);line-height:1.6}
 
+/* ── V1 NOTICE ──────────────────────────────────────────────────────── */
+
+.v1-notice{
+  background:rgba(245,158,11,0.08);
+  border:1px solid rgba(245,158,11,0.28);
+  border-radius:var(--radius-sm);
+  padding:11px 16px;
+  font-size:13px;
+  color:#fcd34d;
+  line-height:1.6;
+  margin-bottom:24px;
+}
+.v1-notice strong{
+  color:#fde68a;
+  font-weight:600;
+}
+
 /* ── AGENT GRID ─────────────────────────────────────────────────────── */
 
 .agent-grid{

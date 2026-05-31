@@ -1005,7 +1005,7 @@ function initPostGenerator() {
           <div class="extra-block"><label>Caption</label><p>${t.caption}</p></div>
           <div class="extra-block"><label>Hashtags</label><p>${t.hashtags}</p></div>
           <div class="extra-block"><label>Canva Notes</label><p>${t.canva}</p></div>
-          <div class="extra-block"><label>DM Reply Template</label><p>${t.dm.replace(/\n/g,'<br>')}</p></div>
+          <div class="extra-block"><label>DM Reply Template</label><p style="white-space:pre-line">${t.dm}</p></div>
         </div>
         <div class="post-action-bar">
           <button class="btn btn-copy" onclick="copyFullPost(this)">Copy Full Post</button>
@@ -1019,17 +1019,48 @@ function initPostGenerator() {
 }
 
 function copyFullPost(btn) {
-  const t = btn.closest('.generated-post-card');
-  const slides = t.querySelectorAll('.slide-text');
-  const extras = t.querySelectorAll('.extra-block');
+  const card = btn.closest('.generated-post-card');
+  const slides = card.querySelectorAll('.slide-text');
+  const extras = card.querySelectorAll('.extra-block');
   let text = '';
-  slides.forEach((s, i) => { text += `Slide ${i+1}: ${s.textContent}\n\n`; });
-  extras.forEach(e => { text += `${e.querySelector('label').textContent}: ${e.querySelector('p').textContent}\n\n`; });
-  navigator.clipboard.writeText(text.trim()).then(() => {
+  slides.forEach((s, i) => {
+    text += `Slide ${i + 1}: ${s.textContent.trim()}\n\n`;
+  });
+  extras.forEach(e => {
+    const lbl = e.querySelector('label').textContent.trim();
+    // Use innerText to preserve newlines set by white-space:pre-line
+    const val = (e.querySelector('p').innerText || e.querySelector('p').textContent).trim();
+    text += `${lbl}:\n${val}\n\n`;
+  });
+  const payload = text.trim();
+
+  const doConfirm = () => {
     btn.textContent = 'Copied!';
     btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = 'Copy Full Post'; btn.classList.remove('copied'); }, 2000);
-  });
+    showToast('Full post copied to clipboard.');
+    setTimeout(() => { btn.textContent = 'Copy Full Post'; btn.classList.remove('copied'); }, 2200);
+  };
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(payload).then(doConfirm).catch(() => fallbackCopy(payload, doConfirm));
+  } else {
+    fallbackCopy(payload, doConfirm);
+  }
+}
+
+function fallbackCopy(text, onSuccess) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+    if (onSuccess) onSuccess();
+  } catch (e) {
+    showToast('Copy failed — try selecting text manually.');
+  }
+  document.body.removeChild(ta);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -1227,13 +1258,18 @@ function copyAgentOutput(id, btn) {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function copyText(text, btn) {
-  navigator.clipboard.writeText(text).then(() => {
-    const orig = btn.textContent;
+  const orig = btn.textContent;
+  const confirm = () => {
     btn.textContent = 'Copied!';
     btn.classList.add('copied');
+    showToast('Copied to clipboard.');
     setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
-  });
-  showToast('Copied to clipboard.');
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(confirm).catch(() => fallbackCopy(text, confirm));
+  } else {
+    fallbackCopy(text, confirm);
+  }
 }
 
 function escapeAttr(str) {
