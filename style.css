@@ -7,7 +7,7 @@
   --border:rgba(255,255,255,0.09);
   --border-glow:rgba(59,130,246,0.35);
   --text:#f0f4ff;
-  --muted:#5a6a85;
+  --muted:#7b8ba5;
   --accent:#3b82f6;
   --accent-dim:rgba(59,130,246,0.15);
   --accent-glow:rgba(59,130,246,0.25);
@@ -751,7 +751,8 @@ select option{background:#10141e}
   .form-row-3{grid-template-columns:1fr}
   .entry-metrics{grid-template-columns:repeat(2,1fr)}
   .generator-bar{flex-direction:column;align-items:stretch}
-  .cal-table{font-size:12px}
+  #calendarContent{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .cal-table{font-size:12px;min-width:560px}
   .cal-table th,.cal-table td{padding:8px}
 }
 

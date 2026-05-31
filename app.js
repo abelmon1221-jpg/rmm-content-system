@@ -123,7 +123,7 @@ const POST_TEMPLATES = {
       slide4:'The biggest improvement is usually bullet points. AI makes them specific in about 30 seconds.',
       slide5:'Comment RESUME and I\'ll send the free starter checklist.',
       caption:'Simple service. Existing demand. No complicated setup.',
-      hashtags:'#resumecleanup #aiside hustle #extraincome #beginnerbusiness #makemoneyonline',
+      hashtags:'#resumecleanup #aisidehustle #extraincome #beginnerbusiness #makemoneyonline',
       canva:'Use a dark gradient background. White bold text on each slide. Semi-transparent rounded card on Slide 2 to highlight the mechanism clearly.',
       dm:'Fair question. I would be skeptical too.\n\nIt is not a get-rich thing. People genuinely pay to have their resumes cleaned up, and AI makes the service easier to deliver.\n\nStart with the free checklist and judge it for yourself.'
     },
@@ -147,7 +147,7 @@ const POST_TEMPLATES = {
       slide4:'The AI makes the service faster to deliver. That\'s the whole advantage — not magic, just efficiency.',
       slide5:'Start with the free checklist. Comment RESUME.',
       caption:'No hype. No guarantees. Just a simple service with real demand.',
-      hashtags:'#nofluff #resumeservice #realsidesuhstle #aitools #beginnerbusiness',
+      hashtags:'#nofluff #resumeservice #realsidehustle #aitools #beginnerbusiness',
       canva:'Dark background. Minimal design. Slide 1 should feel direct and honest, not salesy. No exclamation marks in design text.',
       dm:'Fair question. I would be skeptical too.\n\nIt is not a get-rich thing. People genuinely pay to have their resumes cleaned up, and AI makes the service easier to deliver.\n\nStart with the free checklist and judge it for yourself.'
     },
@@ -158,7 +158,7 @@ const POST_TEMPLATES = {
       slide4:'The tool stack is Grok, ChatGPT, and Claude. Each one handles a specific part of the cleanup.',
       slide5:'Comment RESUME if you want to understand the process first.',
       caption:'Active income. Real service. Honest process.',
-      hashtags:'#honestsidesuhstle #resumecleanup #aiassisted #extraincome #noguruneeded',
+      hashtags:'#honestsidehustle #resumecleanup #aiassisted #extraincome #noguruneeded',
       canva:'Very clean design. One line per slide. Slide 2 should feel like a clear, calm statement of fact — not a pitch.',
       dm:'I do not want to throw a random number at you because it depends on how many people you help and how consistent you are.\n\nWhat I can show you is the process.\n\nStart with the free checklist first and see if it feels like something you would actually do.'
     },
@@ -182,7 +182,7 @@ const POST_TEMPLATES = {
       slide4:'Start with bullet points. Most resumes have vague bullets that AI can sharpen in under a minute.',
       slide5:'Comment RESUME and I\'ll send the checklist.',
       caption:'Not a credential. A process. Beginners can start here.',
-      hashtags:'#beginnersidesuhstle #resumecleanup #aitools #noexperienceneeded #extraincome',
+      hashtags:'#beginnersidehustle #resumecleanup #aitools #noexperienceneeded #extraincome',
       canva:'Clean, simple design. Slide 3 should feel reassuring, not overselling. Calm white text on dark background.',
       dm:'No, that is the point.\n\nYou are not becoming a professional resume writer.\n\nYou are learning a simple resume cleanup process using AI tools.\n\nThe checklist shows the basic steps.'
     },
@@ -193,7 +193,7 @@ const POST_TEMPLATES = {
       slide4:'The most common fixes: vague bullets, missing keywords, inconsistent formatting. AI handles all three.',
       slide5:'Want the beginner checklist? Comment RESUME.',
       caption:'No degree. No certification. Just a repeatable cleanup process.',
-      hashtags:'#noexperience #beginnersidesuhstle #resumeservice #aiassisted #makemoney',
+      hashtags:'#noexperience #beginnersidehustle #resumeservice #aiassisted #makemoney',
       canva:'Slide 1 should feel like a direct question. Slide 2 answers it clearly. Bold white text, no clutter.',
       dm:'No, that is the point.\n\nYou are not becoming a professional resume writer.\n\nYou are learning a simple resume cleanup process using AI tools.\n\nThe checklist shows the basic steps.'
     },
@@ -204,7 +204,7 @@ const POST_TEMPLATES = {
       slide4:'A consistent delivery format and a working cleanup process are enough to start small.',
       slide5:'Comment RESUME and I\'ll send the first steps.',
       caption:'Simple to explain. Simple to deliver. Beginner-appropriate.',
-      hashtags:'#simplesidesuhstle #resumecleanup #beginnerbusiness #extraincome #aitools',
+      hashtags:'#simplesidehustle #resumecleanup #beginnerbusiness #extraincome #aitools',
       canva:'Minimal design. Each slide should be readable in under 2 seconds. Slide 5 CTA front and center.',
       dm:'Start with the free checklist first.\n\nYou do not need to buy anything just to understand the idea.\n\nIf it makes sense later, the full guide is there.'
     }
@@ -228,7 +228,7 @@ const POST_TEMPLATES = {
       slide4:'Vague bullets like "assisted with projects" become specific and measurable with the right AI prompt.',
       slide5:'Want to see the checklist? Comment RESUME.',
       caption:'Same problems. Same fixes. Repeatable process.',
-      hashtags:'#resumeprocess #aicleanup #sidehustlesteps #makemoney #beginnersidesuhstle',
+      hashtags:'#resumeprocess #aicleanup #sidehustlesteps #makemoney #beginnersidehustle',
       canva:'Slide 4 could show a before/after bullet example. White text on dark card. Keep it punchy.',
       dm:'Sent. Here\'s the free Resume Cleanup Starter Checklist. It walks you through the basic process. Take a look and tell me if it makes sense for you.\n\n[link]'
     },
@@ -379,7 +379,7 @@ const POST_TEMPLATES = {
       slide4:'AI makes the service faster to deliver. That\'s the whole structural advantage.',
       slide5:'Want the simple breakdown? Comment RESUME.',
       caption:'Services are simpler to sell. AI makes them faster to deliver.',
-      hashtags:'#aiservice #simplesidesuhstle #resumecleanup #nocomplication #makemoney',
+      hashtags:'#aiservice #simplesidehustle #resumecleanup #nocomplication #makemoney',
       canva:'Contrast the complexity of typical AI side hustles with the simplicity of this one. Clean, minimal design.',
       dm:'Sent. Here\'s the free Resume Cleanup Starter Checklist. It walks you through the basic process. Take a look and tell me if it makes sense for you.\n\n[link]'
     }
@@ -414,7 +414,7 @@ const POST_TEMPLATES = {
       slide4:'AI cuts the delivery time per resume. That\'s where the practical value of the tools comes in.',
       slide5:'Comment RESUME if the honest version still sounds worth exploring.',
       caption:'Active income. Honest model. Simple service.',
-      hashtags:'#nopassiveincome #activesidesuhstle #resumeservice #honestmoney #aitools',
+      hashtags:'#nopassiveincome #activesidehustle #resumeservice #honestmoney #aitools',
       canva:'Plain, honest-feeling design. Slide 1 is a direct clarification. No decorative elements that feel hype-adjacent.',
       dm:'No pressure. Try the checklist first.\n\nIf you get stuck or have questions, message me.'
     }
@@ -819,8 +819,8 @@ function renderCTABank() {
       <div class="cta-group-title">${s.title}</div>
       ${CTA_BANK[s.key].map(cta => `
         <div class="cta-row">
-          <div class="cta-text ${s.avoid ? 'avoid' : ''}">${cta}</div>
-          ${!s.avoid ? `<button class="btn btn-copy btn-sm" onclick="copyText('${escapeAttr(cta)}', this)">Copy</button>` : ''}
+          <div class="cta-text ${s.avoid ? 'avoid' : ''}">${escapeHTML(cta)}</div>
+          ${!s.avoid ? `<button class="btn btn-copy btn-sm" data-copy-text="${htmlEsc(cta)}" onclick="copyTextFromBtn(this)">Copy</button>` : ''}
         </div>
       `).join('')}
     </div>
@@ -832,10 +832,10 @@ function renderDMReplies() {
   container.innerHTML = DM_REPLIES.map(r => `
     <div class="dm-card">
       <div class="dm-card-header">
-        <div class="dm-trigger">${r.trigger}</div>
-        <button class="btn btn-copy btn-sm" onclick="copyText('${escapeAttr(r.reply)}', this)">Copy</button>
+        <div class="dm-trigger">${escapeHTML(r.trigger)}</div>
+        <button class="btn btn-copy btn-sm" data-copy-text="${htmlEsc(r.reply)}" onclick="copyTextFromBtn(this)">Copy</button>
       </div>
-      <div class="dm-card-body">${r.reply}</div>
+      <div class="dm-card-body">${escapeHTML(r.reply)}</div>
     </div>
   `).join('');
 }
@@ -899,10 +899,10 @@ function renderLandingPage() {
   container.innerHTML = LANDING_PAGE.map(block => `
     <div class="lp-block">
       <div class="lp-header">
-        <div class="lp-label">${block.label}</div>
-        <button class="btn btn-copy btn-sm" onclick="copyText('${escapeAttr(block.body)}', this)">Copy</button>
+        <div class="lp-label">${escapeHTML(block.label)}</div>
+        <button class="btn btn-copy btn-sm" data-copy-text="${htmlEsc(block.body)}" onclick="copyTextFromBtn(this)">Copy</button>
       </div>
-      <div class="lp-body">${block.body}</div>
+      <div class="lp-body">${escapeHTML(block.body)}</div>
     </div>
   `).join('');
 }
@@ -1141,12 +1141,15 @@ function renderEntries() {
   }
   container.innerHTML = entries.map(e => {
     const dropClass = e.dropoff > 70 ? 'bad' : e.dropoff > 50 ? 'ok' : 'good';
+    const safeAngle = escapeHTML(e.angle || '');
+    const safeTopic = escapeHTML(e.topic || '');
+    const safeNotes = escapeHTML(e.notes || '');
     return `
       <div class="entry-card">
         <div class="entry-head">
           <div class="entry-meta">
             <strong>${e.date} — ${e.time}</strong>
-            <span>${e.angle || ''} ${e.topic ? '· ' + e.topic : ''}</span>
+            <span>${safeAngle}${safeTopic ? ' · ' + safeTopic : ''}</span>
           </div>
           <button class="btn btn-danger btn-sm" onclick="deleteEntry(${e.id})">Delete</button>
         </div>
@@ -1156,7 +1159,7 @@ function renderEntries() {
           <div class="m-box"><div class="m-val">${e.resumeComments||0}</div><div class="m-lbl">RESUME cmts</div></div>
           <div class="m-box"><div class="m-val">${e.sales||0}</div><div class="m-lbl">Sales</div></div>
         </div>
-        ${e.notes ? `<div style="margin-top:10px;font-size:12px;color:var(--muted);padding-top:8px;border-top:1px solid var(--border)">${e.notes}</div>` : ''}
+        ${safeNotes ? `<div style="margin-top:10px;font-size:12px;color:var(--muted);padding-top:8px;border-top:1px solid var(--border);white-space:pre-line">${safeNotes}</div>` : ''}
       </div>
     `;
   }).join('');
@@ -1246,11 +1249,17 @@ function copyAgentOutput(id, btn) {
     showToast('Run the agent first.');
     return;
   }
-  navigator.clipboard.writeText(output).then(() => {
+  const confirm = () => {
     btn.textContent = 'Copied!';
     btn.classList.add('copied');
+    showToast('Copied to clipboard.');
     setTimeout(() => { btn.textContent = 'Copy Output'; btn.classList.remove('copied'); }, 2000);
-  });
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(output).then(confirm).catch(() => fallbackCopy(output, confirm));
+  } else {
+    fallbackCopy(output, confirm);
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -1272,8 +1281,29 @@ function copyText(text, btn) {
   }
 }
 
-function escapeAttr(str) {
-  return str.replace(/'/g, '&#39;').replace(/"/g, '&quot;').replace(/\n/g, ' ');
+// Escape text for safe insertion into HTML attribute values (double-quote delimited).
+// The HTML parser decodes these back to original characters, so dataset.copyText
+// always contains the original string — no double-encoding.
+function htmlEsc(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;');
+}
+
+// Escape text before inserting as innerHTML to prevent XSS from user-typed data.
+function escapeHTML(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Read the pre-stored copy text from a data attribute and pass it to copyText.
+// Used by copy buttons that need to avoid inline string-passing in onclick.
+function copyTextFromBtn(btn) {
+  copyText(btn.dataset.copyText || '', btn);
 }
 
 function showToast(msg) {
