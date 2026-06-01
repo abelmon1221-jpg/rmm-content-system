@@ -747,12 +747,14 @@ function initNav() {
   toggle.addEventListener('click', () => {
     sidebar.classList.toggle('open');
     overlay.classList.toggle('open');
+    toggle.classList.toggle('open');
   });
   overlay.addEventListener('click', closeSidebar);
 
   function closeSidebar() {
     sidebar.classList.remove('open');
     overlay.classList.remove('open');
+    toggle.classList.remove('open');
   }
 }
 

@@ -31,6 +31,7 @@ body{
   font-size:15px;
   line-height:1.65;
   min-height:100vh;
+  -webkit-tap-highlight-color:transparent;
 }
 
 /* ambient glow */
@@ -101,6 +102,7 @@ body::before{
   font-size:13.5px;
   transition:background 0.15s,color 0.15s,opacity 0.15s;
   opacity:0.55;
+  touch-action:manipulation;
 }
 .nav-btn:hover{background:var(--surface-2);opacity:0.9}
 .nav-btn.active{
@@ -521,6 +523,7 @@ h3{font-size:15px;font-weight:600;margin-bottom:8px}
   cursor:pointer;border-radius:6px;
   font-size:13.5px;
   transition:background 0.15s,color 0.15s;
+  touch-action:manipulation;
 }
 .tab-btn.active{
   background:var(--surface-2);
@@ -639,6 +642,7 @@ select option{background:#10141e}
   border:none;cursor:pointer;
   font-size:13.5px;font-weight:500;font-family:inherit;
   transition:background 0.15s,transform 0.1s,box-shadow 0.15s;
+  touch-action:manipulation;
 }
 .btn:active{transform:scale(0.97)}
 
@@ -709,12 +713,17 @@ select option{background:#10141e}
 }
 .menu-toggle{
   background:none;border:none;cursor:pointer;
-  padding:4px;display:flex;flex-direction:column;gap:5px;
+  padding:10px;display:flex;flex-direction:column;gap:5px;
+  touch-action:manipulation;
 }
 .menu-toggle span{
   display:block;width:22px;height:2px;
-  background:var(--text);border-radius:2px;transition:0.2s;
+  background:var(--text);border-radius:2px;
+  transition:transform 0.25s ease,opacity 0.2s ease;
 }
+.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 .overlay{
   display:none;
@@ -738,14 +747,28 @@ select option{background:#10141e}
   .sidebar{
     transform:translateX(-100%);
     top:57px;height:calc(100vh - 57px);
+    /* Prevent off-screen sidebar from capturing touch events (iOS Safari bug) */
+    pointer-events:none;
   }
-  .sidebar.open{transform:translateX(0)}
+  .sidebar.open{transform:translateX(0);pointer-events:auto}
   .overlay.open{display:block}
 
   .main{
     margin-left:0;
     padding:22px 16px;
   }
+
+  /* Prevent iOS Safari auto-zoom on input focus (requires font-size >= 16px) */
+  input[type="text"],input[type="number"],input[type="date"],
+  select,textarea{font-size:16px}
+
+  /* Larger touch targets for small buttons */
+  .btn-sm{padding:8px 14px;font-size:13px;min-height:36px}
+  .btn-copy{padding:8px 14px}
+
+  /* Full-width tab bar with equal tap zones */
+  .tabs{width:100%;box-sizing:border-box}
+  .tab-btn{flex:1;text-align:center}
 
   .stat-grid{grid-template-columns:1fr 1fr}
   .form-row-3{grid-template-columns:1fr}
