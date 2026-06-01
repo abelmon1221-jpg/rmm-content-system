@@ -48,7 +48,7 @@ body::before{
 
 /* ── LAYOUT ─────────────────────────────────────────────────────────── */
 
-.layout{display:flex;min-height:100vh;position:relative}
+.layout{display:flex;min-height:100vh}
 
 /* ── SIDEBAR ────────────────────────────────────────────────────────── */
 
@@ -133,8 +133,11 @@ body::before{
 .main{
   margin-left:var(--sidebar);
   flex:1;
+  min-width:0;
   padding:44px 52px;
   max-width:960px;
+  position:relative;
+  z-index:1;
 }
 
 /* ── SECTIONS ───────────────────────────────────────────────────────── */

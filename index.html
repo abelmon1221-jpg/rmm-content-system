@@ -15,38 +15,40 @@
     </button>
   </header>
 
-  <div class="layout">
+  <!-- Sidebar is a direct child of body so it is never trapped inside
+       a CSS stacking context created by .layout -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">RMM</div>
+      <div class="brand-tagline">Agent Command Center</div>
+    </div>
+    <ul class="nav-list">
+      <li><button class="nav-btn active" data-section="home">&#127968; Dashboard</button></li>
+      <li><button class="nav-btn" data-section="agents">&#129302; Agent Center</button></li>
+      <li><button class="nav-btn" data-section="post-generator">&#9998; Post Generator</button></li>
+      <li><button class="nav-btn" data-section="calendar">&#128197; Weekly Calendar</button></li>
+      <li><button class="nav-btn" data-section="cta-bank">&#128172; CTA Bank</button></li>
+      <li><button class="nav-btn" data-section="dm-replies">&#128233; DM Replies</button></li>
+      <li><button class="nav-btn" data-section="content-rules">&#128203; Content Rules</button></li>
+      <li><button class="nav-btn" data-section="landing-page">&#127760; Landing Page</button></li>
+      <li><button class="nav-btn" data-section="performance">&#128202; Performance</button></li>
+      <li><button class="nav-btn" data-section="next-steps">&#128640; Next Steps</button></li>
+    </ul>
+    <div class="sidebar-funnel">
+      <div class="funnel-label">Goal Funnel</div>
+      <div class="funnel-chain">
+        <span class="funnel-step">Comments</span>
+        <span class="funnel-arrow">&#8595;</span>
+        <span class="funnel-step">DMs</span>
+        <span class="funnel-arrow">&#8595;</span>
+        <span class="funnel-step">Checklist</span>
+        <span class="funnel-arrow">&#8595;</span>
+        <span class="funnel-step accent">$20 Sale</span>
+      </div>
+    </div>
+  </nav>
 
-    <nav class="sidebar" id="sidebar">
-      <div class="sidebar-brand">
-        <div class="brand-logo">RMM</div>
-        <div class="brand-tagline">Agent Command Center</div>
-      </div>
-      <ul class="nav-list">
-        <li><button class="nav-btn active" data-section="home">&#127968; Dashboard</button></li>
-        <li><button class="nav-btn" data-section="agents">&#129302; Agent Center</button></li>
-        <li><button class="nav-btn" data-section="post-generator">&#9998; Post Generator</button></li>
-        <li><button class="nav-btn" data-section="calendar">&#128197; Weekly Calendar</button></li>
-        <li><button class="nav-btn" data-section="cta-bank">&#128172; CTA Bank</button></li>
-        <li><button class="nav-btn" data-section="dm-replies">&#128233; DM Replies</button></li>
-        <li><button class="nav-btn" data-section="content-rules">&#128203; Content Rules</button></li>
-        <li><button class="nav-btn" data-section="landing-page">&#127760; Landing Page</button></li>
-        <li><button class="nav-btn" data-section="performance">&#128202; Performance</button></li>
-        <li><button class="nav-btn" data-section="next-steps">&#128640; Next Steps</button></li>
-      </ul>
-      <div class="sidebar-funnel">
-        <div class="funnel-label">Goal Funnel</div>
-        <div class="funnel-chain">
-          <span class="funnel-step">Comments</span>
-          <span class="funnel-arrow">&#8595;</span>
-          <span class="funnel-step">DMs</span>
-          <span class="funnel-arrow">&#8595;</span>
-          <span class="funnel-step">Checklist</span>
-          <span class="funnel-arrow">&#8595;</span>
-          <span class="funnel-step accent">$20 Sale</span>
-        </div>
-      </div>
-    </nav>
+  <div class="layout">
 
     <main class="main" id="mainContent">
 
