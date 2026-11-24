@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "openscreen": {
+      "source": {
+        "source": "github",
+        "repo": "getopenscreen/openscreen"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "openscreen@openscreen": true
+  }
+}
